@@ -34,6 +34,6 @@ public class ProduitService {
     public Produit recupererProduitParId(Integer id)
     {
         return produitRepository.findById(id)
-                .orElseThrow(() -> new ProduitNotFoundException("Erreur : Le produit avec l'id " + " n'existe pas"));
+                .orElseThrow(() -> new ProduitNotFoundException("Erreur : Le produit avec l'id " + id +" n'existe pas"));
     }
 }
