@@ -27,4 +27,8 @@ public class Produit {
     @Positive(message = "Le prix doit être supérieur à zéro")
     @Column(nullable = false)
     private Double prix;
+
+    @ManyToOne
+    @JoinColumn(name = "categorie_id")
+    private Categorie categorie;
 }
